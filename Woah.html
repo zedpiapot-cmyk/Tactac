@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ♡</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Georgia,'Times New Roman',serif;color:#542b3b}body{background:linear-gradient(180deg,#fff1f6,#fce5ee 55%,#fff5f8)}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:70px 24px}.card{width:min(680px,100%);background:rgba(255,255,255,.95);border-radius:44px;padding:58px 30px;box-shadow:0 24px 60px rgba(126,49,79,.14);text-align:center}h1{font-size:clamp(42px,10vw,60px);margin:0 0 28px;color:#542536}.heart{font-weight:400}.subtitle{font-size:clamp(21px,5vw,29px);line-height:1.45;color:#765866;margin:0 auto 38px}button{border:0;border-radius:999px;background:#c13b68;color:#fff;font:bold 22px Arial,sans-serif;padding:18px 44px;box-shadow:0 14px 28px rgba(193,59,104,.23);cursor:pointer}button:active{transform:scale(.97)}.hidden{display:none!important}
+#reasonScreen .card{padding:38px 22px 48px}.reason-number{font-size:24px;color:#8b5a6b;margin-bottom:22px}.reason-text{font-size:clamp(27px,6.8vw,39px);line-height:1.35;min-height:170px;display:flex;align-items:center;justify-content:center;color:#5b3040;padding:15px}.progress{font:16px Arial,sans-serif;color:#9a7180;margin:25px 0}.final-text{font-size:clamp(23px,5.5vw,31px);line-height:1.6;color:#633849;margin:0 auto 38px}.footer{text-align:center;font:16px Arial,sans-serif;color:#111;padding:0 10px 25px}
+@media(max-width:500px){.page{padding:60px 15px}.card{border-radius:40px;padding:50px 23px}.reason-text{min-height:190px}}
+</style>
+</head>
+<body>
+<audio id="yourUniverse" preload="auto"><source src="./your-universe.mp3" type="audio/mpeg"></audio>
+<audio id="bawatDaan" preload="auto"><source src="./bawat-daan.mp3" type="audio/mpeg"></audio>
+<audio id="coPilot" preload="auto"><source src="./co-pilot.mp3" type="audio/mpeg"></audio>
+
+<section id="welcome" class="page">
+<div class="card">
+<h1>For You<span class="heart">♡</span></h1>
+<p class="subtitle">144 reasons why I love you<br>144 para mas marami Kesa sayo 🙄</p>
+<button id="openBtn">Open Me</button>
+</div>
+</section>
+
+<section id="reasonScreen" class="page hidden">
+<div class="card">
+<div id="reasonNumber" class="reason-number"></div>
+<div id="reasonText" class="reason-text"></div>
+<div id="progress" class="progress"></div>
+<button id="nextBtn">Next ♡</button>
+</div>
+</section>
+
+<section id="finalScreen" class="page hidden">
+<div class="card">
+<h1>For You<span class="heart">♡</span></h1>
+<p class="final-text">Thank you for being you. After all 144 reasons, I still can't fit everything I love about you into a list. I hope you always remember how special you are to me. ♡</p>
+<div style="font-size:58px">♡</div>
+</div>
+</section>
+<div class="footer">zedpiapot-cmyk.github.io</div>
+
+<script>
+const reasons = [
+"The way you say my name","You make even random conversations memorable","Your little “hehe” moments","The way you get excited over the smallest things","You somehow make time feel faster","Your cute voice when you’re sleepy","You make me want to tell you every random thought I have","The way you react when I tease you (asar talo)","Your cute stickers","Your little stories that you tell me","I love how you have your own way of doing things","The way you get focused when you really want something (di namamansin)","You make me look forward to checking my phone (my fav notif)","Your random selfies na ni sesend","The way you suddenly become extra playful","You make me curious about all the things you love (syempre dapat ako lang)","Your cute little “hmm”s","I love hearing about how your day went","You make conversations never feel forced","The way you get excited when telling me something","Your random facial expressions","You make me want to make more memories with you","The way you sometimes overthink the funniest things","Your extra Vv long hair","You make me smile at my phone like an idiot","The way you randomly change topics","Your cute reactions when you’re surprised","I love knowing more about you little by little","You make waiting for something feel worth it (mga chika)","The way you remember certain moments we shared","Your random “what if” questions","You make simple conversations feel special","The way you get competitive sometimes (ayaw palamang)","Your little laugh when something catches you off guard","I love discovering new sides of you","The way you get excited when you have something to show me","You make me want to keep our little memories forever","Your random voice messages (pag Tinatamad yan sya mag type)","The way you tell stories with so much expression","You make me laugh at things I normally wouldn’t find funny","Your cute sleepy moments (kahit sungit)","The way you sometimes act like a little kid","You make me enjoy doing absolutely nothing","Your random questions at the most unexpected times","I love the way you can make a normal day feel different","Your little “hey” moments","The way you get surprised when I remember something","You make me want to know everything about your day","Your random pictures that you send me","The way you sometimes get lost in your own thoughts","You make me feel lucky whenever realize I get to know you this closely","Your little reactions when I compliment you (idk Nya)","The way you laugh at your own jokes","You make me enjoy our stupid conversations","Your random energy","The way you get excited over food 🍟","I love hearing your opinions about random things","You make me want to save every funny conversation","Your pa higop na tawa","The way you suddenly become quiet when you’re concentrating","You make me excited whenever I know we’re going to talk","Your random “alam mo ba” moments","The way you tell me about things that happened during your day","I love how many different moods you can have in one conversation","Your cute little misunderstandings","Your masungit side","Your cute stickers","Your random ideas na kahit unrealistic","The way you sometimes get way too excited about something","I love watching you enjoy the things you care about","Your little “wait lang” moments","The way you make me curious about what you’re thinking (fomo yan sya)","You make me want to take more pictures together","Your random jokes that come out of nowhere","Your matangad na height","I love how every conversation with you has its own memory attached to it","Your little dramatic moments","The way you make me laugh when I least expect it","You make me want to experience new things with you","You bought me t shirt","The way you tell me things you think I might like","I love your reactions when you finally understand something (ahhh)","Your little “hala” moments","The way you love food","The way you get happy when something you wanted finally happens","Your random compliments na di naman totoo","The way you laro with my hair","Our alam mo na moments","Your little routines","The way you make me feel like our conversations could go on forever","The way you remember things about me","Your random late night thoughts","The way you sometimes say something completely unexpected","I love how you don’t want want me gutom","Your muryot times","Your cute reactions when I catch you doing something funny (hehe)","The way you make me forget about the time","Your cutie baby pics","Your existence","I love seeing you happy about something you worked for","Your random “Tignan mo to” messages","The way you make me laugh through chats","You make ordinary pictures feel meaningful","The way you lambing me","The way you kiss me","I love how unpredictable our conversations can be","Your random bursts of energy","I love how comfortable you are with me","The way you tell me about something you just discovered","Your smile na minsan ko lang makita","Your efforts","How clingy you are","Your random “remember this?” moments","Your random bashing moments","Your tapilok moments","Your cute reactions about stuff toys","I love how we share things that we both like","The way you make me laugh with just one look","Your random nomnom sounds","You make me appreciate the time we spend together","The random thoughts in your head","Your curiosity about things","I love how you always have something to chika","Your little moments of excitement","The way you sometimes make a big deal out of tiny things","I love how you call me your baby","I love how you alaga me","I love how you never forget about me","I love all your bilin sakin","I love how your concern about me","I love how you choose me","I love how you check up on me","I love how you support me","I love how you can sense when I’m not okay","I love how you play with me","I love how willing you are","I love how you make letters for me","I love how competitive you are with me","I love how you value me","I love every version of you","I love the way you motivate me","I love how you stay for me","I love how you treat me","And after all these reasons, I still can’t fit everything I love about you into a list."
+];
+
+if(reasons.length!==144) throw new Error('Expected 144 reasons, got '+reasons.length);
+const welcome=document.getElementById('welcome'), screen=document.getElementById('reasonScreen'), finalScreen=document.getElementById('finalScreen');
+const openBtn=document.getElementById('openBtn'), nextBtn=document.getElementById('nextBtn');
+const number=document.getElementById('reasonNumber'), text=document.getElementById('reasonText'), progress=document.getElementById('progress');
+const yu=document.getElementById('yourUniverse'), bd=document.getElementById('bawatDaan'), cp=document.getElementById('coPilot');
+let index=0;
+function stop(a){a.pause();a.currentTime=0;}
+function showReason(){number.textContent=(index+1)+'.';text.textContent=reasons[index];progress.textContent=(index+1)+' of 144';nextBtn.textContent=index===143?'Done ♡':'Next ♡';window.scrollTo({top:0,behavior:'smooth'});}
+openBtn.addEventListener('click',async()=>{stop(yu);stop(cp);welcome.classList.add('hidden');finalScreen.classList.add('hidden');screen.classList.remove('hidden');index=0;showReason();try{await bd.play()}catch(e){console.log(e)}});
+nextBtn.addEventListener('click',async()=>{if(index<143){index++;showReason();return}stop(bd);stop(yu);screen.classList.add('hidden');finalScreen.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});try{await cp.play()}catch(e){console.log(e)}});
+</script>
+</body>
+</html>
